@@ -1,0 +1,67 @@
+body {
+    background-color: #FFF8DC;
+}
+
+main {
+    border: 1px solid red;
+    margin: auto;
+    width: 60%;
+}
+
+nav {
+    height: 150px;
+    border: 1px solid green;
+}
+
+nav img {
+    float: left;
+}
+
+* {
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    border: none;
+}
+
+.logo {
+    width: 16.66%;
+    float: left;
+}
+
+.menu {
+    width: 66.66%;
+    float: left;
+}
+
+.login {
+    width: 16.66%;
+    float: left;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+li {
+    display: inline;
+    float: left;
+    margin-top: 120px;
+    margin-right: 20px;
+
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #7bc143;
+    text-align: center;
+}
