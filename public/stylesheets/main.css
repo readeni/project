@@ -10,14 +10,7 @@ main {
 
 nav {
     height: 150px;
-}
-
-nav .col-2 li{
-    margin-top: 50px;
-}
-
-nav .col-2 {
-    margin-left: 60px;
+    border: 1px solid red;
 }
 
 nav img {
@@ -34,11 +27,22 @@ nav img {
     border: none;
 }
 
-li {
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+  width: 700px;
+  height: 40px;
+  border: 1px solid blue;
+  margin-top: 100px;
+  position: absolute;
+  margin-left: 20%;
+}
+
+nav li {
     display: inline;
     float: left;
-    margin-top: 108px;
     padding-right: 20px;
+    padding-top: 10px;
 }
 
 nav ul li a {
@@ -53,6 +57,9 @@ nav ul li a {
 [class*="col-"] {
     float: left;
 }
+
+/*Responsive Styles*/
+
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
