@@ -149,16 +149,28 @@ nav li:last-child a {
 }
 
 @media only screen and (max-width : 320px) {
-  nav li {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  nav li a {
-    border-bottom: 1px solid #576979;
-  }
+    
 }
+/*
+$(function() {
+  var pull    = $('#pull');
+    menu    = $('nav ul');
+    menuHeight  = menu.height();
 
+  $(pull).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle();
+  });
+});
+
+$(window).resize(function(){
+  var w = $(window).width();
+  if(w > 320 && menu.is(':hidden')) {
+    menu.removeAttr('style');
+  }
+});
+
+*/
 footer {
     height: 200px;
     background-color: #383838;
