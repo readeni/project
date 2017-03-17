@@ -31,4 +31,12 @@ public class HomeController extends Controller {
     public Result reservations() {
         return ok(reservations.render());
     }
+
+    public Result login() {
+      return ok(login.render());
+    }
+
+    public Result register() {
+      return ok(register.render());
+    }
 }
