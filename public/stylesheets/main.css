@@ -6,6 +6,9 @@ main {
     border: 1px solid red;
     margin: auto;
     width: 60%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
 }
 
 nav {
@@ -154,6 +157,26 @@ nav li:last-child a {
   nav li a {
     border-bottom: 1px solid #576979;
   }
+}
+
+footer {
+    height: 200px;
+    background-color: #383838;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 60%;
+    height: 200px;
+    border: 1px solid white;
+}
+
+footer .col-4 {
+  height: 200px;
+    border: 1px solid red;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
 }
 
 .col-1 {width: 8.33%;}
