@@ -6,7 +6,10 @@
 
   nav {
     width: 95%;
+    height: 140px;
   }
 
-
+  nav ul {
+    height: 140px;
+  }
 }

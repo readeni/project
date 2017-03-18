@@ -39,3 +39,27 @@ nav ul {
 main {
   clear: both;
 }
+
+nav li {
+    display: inline;
+    float: left;
+    background-color: grey;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 100px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    border-right: 1px solid #576979;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+nav li:last-child a {
+  border-right: 0;
+}
