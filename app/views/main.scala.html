@@ -17,9 +17,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-            <nav class="clearfix">
-                <a href="/"><img src="@routes.Assets.versioned("images/logo1.gif")" width="147" height="150"></a>
-                    <ul class="clearfix">
+          <div id="pageWrap">
+            <nav>
+                <a href="/"><img src="@routes.Assets.versioned("images/real.png")" width="147" height="150"></a>
+                    <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/menu">Menu</a></li>
                         <li><a href="/reservations">Reservations</a></li>
@@ -27,19 +28,19 @@
                         <li class="child_2"><a href="/login">Login</a></li>
                         <li class="child_2"><a href="/register">Register</a></li>
                     </ul>
-                    <!-- <a href="#" id="pull">Menu</a> -->
             </nav>
-        <main>
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
-        @content
-        </main>
-        <footer>
-          <div class="wrapper">
-              <div class="col-4"></div>
-              <div class="col-4"></div>
-              <div class="col-4"></div>
-          </div>
-        </footer>
+            <main>
+            @* And here's where we render the `Html` object containing
+             * the page content. *@
+            @content
+            </main>
+            <footer>
+              <div class="wrapper">
+                  <div class="col-4"></div>
+                  <div class="col-4"></div>
+                  <div class="col-4"></div>
+              </div>
+            </footer>
+      </div>
     </body>
 </html>
