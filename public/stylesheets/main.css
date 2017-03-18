@@ -1,9 +1,11 @@
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 #pageWrap {
   width: 980px;
   margin: 0 auto;
+  border: 1px solid green;
 }
 body {
   background-color: #FFF8DC;
@@ -16,12 +18,12 @@ footer {
 nav {
   height: 70px;
   border: 1px solid red;
-  margin: 0 auto;
+  margin: 0;
 }
 
 nav img {
   width: auto;
-  height: 70px;
+  max-height: 70px;
   float: left;
 }
 
