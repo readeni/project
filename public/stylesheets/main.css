@@ -9,6 +9,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 body {
   background-color: #FFF8DC;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 footer {
@@ -18,7 +21,9 @@ footer {
 nav {
   height: 70px;
   border: 1px solid red;
-  margin: 0;
+  margin-top: 0 auto;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 nav img {
@@ -29,11 +34,12 @@ nav img {
 
 nav ul {
   float: left;
-  width: 60%;
+  width: auto;
   height: 70px;
   margin: 0 auto;
   position: relative;
   border: 1px solid green;
+  padding: 0;
 }
 
 main {
@@ -43,7 +49,6 @@ main {
 nav li {
     display: inline;
     float: left;
-    background-color: grey;
 }
 
 nav ul li a {
