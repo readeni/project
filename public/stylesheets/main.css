@@ -65,3 +65,7 @@ nav ul li a {
 nav li:last-child a {
   border-right: 0;
 }
+
+.dropdown {
+  display: none;
+}
