@@ -1,0 +1,6 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+#pageWrap {
+  width: 60%;margin: 0 auto;
+}
