@@ -2,5 +2,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 #pageWrap {
-  width: 60%;margin: 0 auto;
+  width: 980px;
+  margin: 0 auto;
+}
+body {
+  background-color: #FFF8DC;
+}
+
+footer {
+  clear: both;
+}
+
+nav {
+  height: 70px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+nav img {
+  width: auto;
+  height: 70px;
+  float: left;
+}
+
+nav ul {
+  float: left;
+  width: 60%;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid green;
+}
+
+main {
+  clear: both;
 }

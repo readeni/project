@@ -12,6 +12,7 @@
         @* Here's where we render the page title `String`. *@
         <title>Real Gourmet Burger</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/media-queries.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/logo.png")">
         <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,7 +21,7 @@
         <![endif]-->
     </head>
     <body>
-          <div id="pageWrap">
+
             <nav>
                 <a href="/"><img src="@routes.Assets.versioned("images/real.png")"></a>
                     <ul id="main.nav">
@@ -32,6 +33,7 @@
                         <li><a href="/register">Register</a></li>
                     </ul>
             </nav>
+            <div id="pageWrap">
             <main>
             @* And here's where we render the `Html` object containing
              * the page content. *@
