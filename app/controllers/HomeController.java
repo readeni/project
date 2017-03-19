@@ -1,8 +1,9 @@
 package controllers;
 
-import play.mvc.*;
-
+import play.mvc.Controller;
+import play.mvc.Result;
 import views.html.*;
+import models.users.User;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -17,26 +18,29 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        return ok(index.render());
+        return ok(index.render(getUserFromSession()));
     }
 
     public Result aboutus() {
-        return ok(aboutus.render());
+        return ok(aboutus.render(getUserFromSession()));
     }
 
     public Result menu() {
-        return ok(menu.render());
+        return ok(menu.render(getUserFromSession()));
     }
 
     public Result reservations() {
-        return ok(reservations.render());
+        return ok(reservations.render(getUserFromSession()));
     }
 
-    public Result login() {
-      return ok(login.render());
-    }
 
     public Result register() {
-      return ok(register.render());
+        return ok(register.render(getUserFromSession()));
+    }
+
+
+    private User getUserFromSession(){
+        return  User.getUserById(session().get("email"));
+
     }
 }

@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@(title: String, user: models.users.User)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,24 +25,41 @@
             <nav>
                 <a href="/"><img src="@routes.Assets.versioned("images/realSmall.png")"></a>
                     <ul id="mainNav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/menu">Menu</a></li>
-                        <li><a href="/reservations">Reservations</a></li>
-                        <li><a href="/aboutus">About Us</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
+                        <li><a href="@routes.HomeController.index()">Home</a></li>
+                        <li><a href="@routes.HomeController.menu()">Menu</a></li>
+                        <li><a href="@routes.HomeController.reservations()">Reservations</a></li>
+                        <li><a href="@routes.HomeController.aboutus()">About Us</a></li>
                     </ul>
+                <ul class="col-2">
+                    <li @if(title == "Login"){class="active"}>
+                    @if(user != null){
+                        <a href="@routes.LoginController.logout()">Logout @user.getName()</a>
+                    } else {
+                        <a href="@routes.LoginController.login()">Login</a>
+                    }
+                    </li>
+                    <li><a href="@routes.HomeController.register()">Register</a></li>
+                </ul>
+
                     <div class="dropdown">
                       <button class="dropbtn">Menu</button>
                       <div class="dropdown-content">
                         <ul id="480Nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/menu">Menu</a></li>
-                            <li><a href="/reservations">Reservations</a></li>
-                            <li><a href="/aboutus">About Us</a></li>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="/register">Register</a></li>
+                            <li><a href="@routes.HomeController.index()">Home</a></li>
+                            <li><a href="@routes.HomeController.menu()">Menu</a></li>
+                            <li><a href="@routes.HomeController.reservations()">Reservations</a></li>
+                            <li><a href="@routes.HomeController.aboutus()">About Us</a></li>
                         </ul>
+                          <ul class="col-2">
+                              <li @if(title == "Login"){class="active"}>
+                              @if(user != null){
+                                  <a href="@routes.LoginController.logout()">Logout @user.getName()</a>
+                              } else {
+                                  <a href="@routes.LoginController.login()">Login</a>
+                              }
+                              </li>
+                              <li><a href="@routes.HomeController.register()">Register</a></li>
+                          </ul>
                     </div>
 </div>
             </nav>
