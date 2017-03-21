@@ -1,5 +1,5 @@
-insert into user (email,name,password,role) values ( 'admin@products.com', 'Alice Admin', 'password', 'admin' );
+insert into user (email,name,password,role) values ( 'admin@products.com', 'admin', 'Alice Admin', 'password'  );
 
-insert into user (email,name,password,role) values ( 'manager@products.com', 'Bob Manager', 'password', 'manager' );
+insert into user (email,name,password,role) values ( 'manager@products.com', 'manager', 'Bob Manager', 'password');
 
-insert into user (email,name,password,role) values ( 'customer@products.com', 'Charlie Customer', 'password', 'customer' );
+insert into user (email,role,name,password) values ( 'customer@products.com', 'customer', 'Charlie Customer', 'password'  );

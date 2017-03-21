@@ -1,6 +1,26 @@
-@(user: models.users.User)
-@main("menu", user) {
+@import models.users.User
+@(addUserForm: Form[models.users.User], user: User)
 
-        <h1>Register</h1>
+
+@import helper._
+@main("Add User", user) {
+
+        <h3>Register</h3>
+
+        @form(action = routes.RegisterController.registerSubmit(),'class -> "form-horizontal", 'role->"form"){
+
+
+                @inputText(addUserForm("email"), '_label -> "Email",'class -> "form-control")
+                @inputText(addUserForm("role"), '_label -> "Role",'class -> "form-control")
+                @inputText(addUserForm("name"), '_label -> "Name",'class -> "form-control")
+                @inputPassword(addUserForm("password"), '_label -> "Password",'class -> "form-control")
+
+                <div class="action">
+                        <input type="submit" value="Add User" class="btn btn-primary"> </input>
+                                <a href="@routes.HomeController.index()"></a>
+                                        <button class="btn btn-warning">Cancel</button>
+
+                </div>
+        }
 
 }

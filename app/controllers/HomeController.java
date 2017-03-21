@@ -1,9 +1,13 @@
 package controllers;
 
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.*;
 import models.users.User;
+
+import javax.inject.Inject;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -33,14 +37,10 @@ public class HomeController extends Controller {
         return ok(reservations.render(getUserFromSession()));
     }
 
-
-    public Result register() {
-        return ok(register.render(getUserFromSession()));
-    }
-
-
     private User getUserFromSession(){
         return  User.getUserById(session().get("email"));
 
     }
+
+
 }

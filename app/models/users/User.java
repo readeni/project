@@ -5,8 +5,12 @@ import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.List;
+import java.util.*;
+import javax.persistence.*;
 
+import com.avaje.ebean.Model;
+import play.data.format.*;
+import play.data.validation.*;
 
 /**
  * Created by Tudor on 18/03/2017.
@@ -28,6 +32,13 @@ public class User extends Model {
 
     public User() {
 
+    }
+
+    public User(String email, String role, String name, String password) {
+        this.email = email;
+        this.role = role;
+        this.name = name;
+        this.password = password;
     }
 
     public static Finder<String, User> find = new Finder<String, User>(User.class);

@@ -29,8 +29,8 @@
                         <li><a href="@routes.HomeController.menu()">Menu</a></li>
                         <li><a href="@routes.HomeController.reservations()">Reservations</a></li>
                         <li><a href="@routes.HomeController.aboutus()">About Us</a></li>
-                    </ul>
-                <ul class="col-2">
+
+
                     <li @if(title == "Login"){class="active"}>
                     @if(user != null){
                         <a href="@routes.LoginController.logout()">Logout @user.getName()</a>
@@ -38,7 +38,7 @@
                         <a href="@routes.LoginController.login()">Login</a>
                     }
                     </li>
-                    <li><a href="@routes.HomeController.register()">Register</a></li>
+                    <li><a href="@routes.RegisterController.register()">Register</a></li>
                 </ul>
 
                     <div class="dropdown">
@@ -49,8 +49,7 @@
                             <li><a href="@routes.HomeController.menu()">Menu</a></li>
                             <li><a href="@routes.HomeController.reservations()">Reservations</a></li>
                             <li><a href="@routes.HomeController.aboutus()">About Us</a></li>
-                        </ul>
-                          <ul class="col-2">
+
                               <li @if(title == "Login"){class="active"}>
                               @if(user != null){
                                   <a href="@routes.LoginController.logout()">Logout @user.getName()</a>
@@ -58,7 +57,7 @@
                                   <a href="@routes.LoginController.login()">Login</a>
                               }
                               </li>
-                              <li><a href="@routes.HomeController.register()">Register</a></li>
+                              <li><a href="@routes.RegisterController.register()">Register</a></li>
                           </ul>
                     </div>
 </div>
